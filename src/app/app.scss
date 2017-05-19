@@ -1,0 +1,84 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// giving negative margin to the navigation buttons to prevent them affecting page title
+.bar-button-menutoggle-md[right] {
+  margin-left: -32px;
+}
+
+.back-button {
+  margin-right: -50px;
+  z-index: 99;
+}
+
+// setting scroll content to auto to prevent displaying scrolling line when we don't need it
+.scroll-content {
+  overflow-y: auto;
+}
+
+// removing white background so we could set our own background on th page
+.toolbar-background-md,
+.content-md {
+  background: none;
+}
+
+.toolbar-title-md {
+  color: $text-color;
+}
+
+ion-title {
+  text-align: center;
+}
+
+.menu-inner .content {
+  background-image: url('http://res.cloudinary.com/vortex6688/image/upload/v1489181297/troves/side-menu-background.svg'); 
+  background-repeat: no-repeat; 
+  background-position: bottom left;
+  background-size: 100% auto;
+  background-color: #54d4f4;
+
+  * {
+    background: none;
+  }
+}
+
+.header-md {
+  &:after {
+    background-image: none;
+  }
+}
+
+.button-md {
+  text-transform: none;
+}
+
+page-profile,
+page-friends,
+page-photos {
+  background-image: url('http://res.cloudinary.com/vortex6688/image/upload/v1487871175/troves/theme-rocky.svg'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-color: #615b79;
+}
+
+.tabs-md {
+    .tabbar {
+      bottom: 50% !important;
+      background: none;
+    }
+}
+

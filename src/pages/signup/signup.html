@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button right menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+
+  <img padding style="width: 80%;" src="https://s3.amazonaws.com/ionic-io-static/qKTqIHRSBWs8iTw2acCw_troves-logo.svg" />
+
+  <form #f="ngForm" (ngSubmit)="onSignup(f)">
+    <div class="row">
+      <div class="col">
+        <ion-item>
+          <ion-input type="email" ngModel name="email" placeholder="Email" required></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ion-item>
+          <ion-input type="password" name="password" ngModel placeholder="Password" required></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" ion-button color="light" [disabled]="!f.valid" round>Sign Up</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col col-50">
+      <button ion-button clear color="light" [navPush]="homePage">I Already Have An Account</button>
+    </div>
+    <div class="col col-50">
+      <button ion-button clear color="light" [navPush]="learnMorePage">Learn More</button>
+    </div>
+  </div>
+
+</ion-content>
